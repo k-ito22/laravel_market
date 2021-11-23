@@ -1,0 +1,117 @@
+body {
+    padding-top: 70px;
+}
+
+.navbar {
+    white-space: nowrap;
+}
+
+.user-name {
+    margin: 8px;
+}
+
+
+input {
+    font-size: 10px;
+}
+
+.error {
+    color: red;
+}
+
+.success {
+    color: green;
+}
+
+.delete {
+    display: inline;
+}
+
+.submit_button {
+    cursor: pointer;
+}
+
+.like {
+    display: inline;
+}
+
+.like_post {
+    background-color: #dccaca;
+    border-top: solid 1px #e67c2e;
+    border-bottom: solid 1px #e67c2e;
+}
+.like_post .post_body_heading {
+    background-color: #dccaca;
+}
+.like_post .post_comments {
+    background-color: #e4d6c7;
+}
+.like_post .like_button {
+    color: yellow;
+}
+
+
+dt {
+    font-weight: bold;
+}
+
+dd {
+    margin-left: 0;
+    margin-bottom: 10px;
+}
+
+.profile_image {
+    display: flex;
+    align-items: center;
+}
+
+.profile_image a {
+    margin-left: 4px;
+}
+
+textarea {
+    display: block;
+    width: 240px;
+    height: 160px;
+}
+
+.item_link {
+    display: block;
+    height: 200px;
+}
+
+.ribbon_item_ima {
+    height: 150px;
+}
+
+.item_image {
+    height: auto;
+    width: auto;
+    max-height: 95%;
+    max-width: 95%;
+}
+
+.item {
+    width: 95%;
+}
+
+.not_tagged {
+    opacity: 0.2;
+}
+
+.ribbon_item_link {
+    display: block;
+    height: 150px;
+}
+
+.ribbon-tab-red {
+    background-color: rgba(255,0,0,0.3);
+}
+
+.ribbon-tab-blue {
+    background-color: rgba(0,0,255,0.3);
+}
+
+.ribbon-tab-green {
+    background-color: rgba(0,255,0,0.3);
+}
