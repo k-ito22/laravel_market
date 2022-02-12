@@ -38,6 +38,14 @@
                         <div class="item_body_price">
                             価格: {{ $item->price }} 円
                         </div>
+                        <div>
+                            状態:
+                            @if ($item->orders->count()>0)
+                                <span>売り切れ</span>
+                            @else
+                                <span>出品中</span>
+                            @endif
+                        </div>
                     </div>
                     <div class="d-flex">
                         <div class="ml-2">

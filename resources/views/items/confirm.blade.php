@@ -4,7 +4,6 @@
 
 @section('content')
 <h1>{{ $title }}</h1>
-<a href="{{ route('items.create') }}">新規出品</a>
 <ul class="items">
     <li class="item">
         <div class="item_header">
@@ -14,6 +13,9 @@
         <div class="item_body">
             <div class="item_body_img">
                 <img src="{{ \Storage::url($item->image) }}">
+            </div>
+            <div class="item_body_name">
+                商品名: {{ $item->name }} 
             </div>
             <div class="item_body_description">
                 商品詳細: {{ $item->description }} 

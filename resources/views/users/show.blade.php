@@ -21,12 +21,15 @@
                 <a href="{{ route('profile.edit') }}">プロフィール編集</a>
             @endif
         </div>
-        <div class='profile_main'>
+        <div class="profile_main">
             @if ($user->profile !== '')
                 {{ $user->profile }}
             @endif
         </div>
-        <div class='profile_items'>
+        <div class="profile_items">
+            出品数: {{ $user->items->count() }}
+        </div>
+        <div class="profile_items_list">
             @if ($user->id !== \Auth::id())
                 <a href="{{ route('users.exhibitions', $user) }}">出品商品一覧</a>
             @endif

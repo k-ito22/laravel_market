@@ -68,11 +68,11 @@ class ItemController extends Controller
                 'price' => $request->price,
                 'image' => $path,
             ]);
-            session()->flash('succsess', '新規商品を登録しました');
+            session()->flash('success', '新規商品を登録しました');
         } else {
             session()->flash('error', '新規商品の登録に失敗しました');
         }
-        return redirect()->route('items.index');
+        return redirect()->route('users.exhibitions', \Auth::user());
     }
 
     public function show(Item $item)
@@ -95,7 +95,6 @@ class ItemController extends Controller
 
     public function update(ItemEditRequest $request, Item $item)
     {
-        $user = \Auth::user();
         $item->update([
             'name' => $request->name,
             'description' => $request->description,
@@ -103,7 +102,8 @@ class ItemController extends Controller
             'category_id' => $request->category_id,
         ]);
         
-        return redirect()->route('users.exhibitions', $user);
+        session()->flash('success', '商品情報を変更しました');
+        return redirect()->route('items.show', $item);
     }
     
     public function edit_image(Item $item)
@@ -116,12 +116,18 @@ class ItemController extends Controller
     
     public function update_image(ItemImageRequest $request, Item $item, FileUploadService $service)
     {
-        $user = \Auth::user();
         $path = $service->saveImage($request->file('image'));
-        $item->update([
-            'image' => $path,
-        ]);
-        return redirect()->route('users.exhibitions', $user);
+        
+        if($path) {
+            $item->update([
+                'image' => $path,
+            ]);
+            session()->flash('success', '商品画像を変更しました');
+        } else {
+            session()->flash('error', '商品画像の変更に失敗しました');
+        }
+        
+        return redirect()->route('items.show', $item);
     }
 
     public function destroy(Item $item)
@@ -153,7 +159,7 @@ class ItemController extends Controller
             ]);
             
             return view('items.finish', [
-                'title' => '購入ありがとうございました',
+                'title' => 'ご購入ありがとうございました',
                 'item' => $item,
             ]);
         }

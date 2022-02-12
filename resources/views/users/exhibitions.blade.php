@@ -3,8 +3,15 @@
 @section('title', $title)
 
 @section('content')
+
 <h1>{{ $title }}</h1>
-<a href="{{ route('users.show', $user) }}">プロフィールを表示</a>
+@if ($user->id === \Auth::id())
+    <div class="clearfix mb-3">
+        <a class="btn btn-secondary float-right" href="{{ route('items.create') }}">新規出品</a>
+    </div>
+@else
+    <a href="{{ route('users.show', $user) }}">プロフィールを表示</a>
+@endif
 <ul class="items">
     @forelse($items as $item)
         <li class="item">
@@ -27,6 +34,14 @@
                 <div class="item_body_price">
                     価格: {{ $item->price }} 円
                 </div>
+                <div>
+                    状態:
+                    @if ($item->orders->count()>0)
+                        <span>売り切れ</span>
+                    @else
+                        <span>出品中</span>
+                    @endif
+                </div>
                 @if ($user->id === \Auth::id())
                     <div class="item_footer">
                         <a href="{{ route('items.edit', $item) }}">[編集]</a>
@@ -44,4 +59,5 @@
         <li>商品はありません。</li>
     @endforelse
 </ul>
+
 @endsection

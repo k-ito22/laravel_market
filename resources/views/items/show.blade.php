@@ -17,6 +17,9 @@
             <div class="item_img">
                 <img src="{{ \Storage::url($item->image) }}">
             </div>
+            <div class="item_body_name">
+                商品名: {{ $item->name }} 
+            </div>
             <div class="item_body_description">
                 商品詳細: {{ $item->description }} 
             </div>
