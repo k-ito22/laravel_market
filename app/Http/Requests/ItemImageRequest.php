@@ -29,7 +29,7 @@ class ItemImageRequest extends FormRequest
                 'file',
                 'image',
                 'mimes:jpeg,jpg,png',
-                'dimensions:min_width=50,min_height=50,max_width=1000,max_height=1000',
+                'dimensions:min_width=50,min_height=50,max_width=7000,max_height=7000',
             ],
         ];
     }
