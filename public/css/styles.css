@@ -63,10 +63,11 @@ dd {
 .profile_image {
     display: flex;
     align-items: center;
+    width: 600px;
 }
 
 .profile_image img {
-    max-width: 600px;
+    max-width: 100%;
 }
 
 .profile_image a {
@@ -120,6 +121,10 @@ textarea {
     background-color: rgba(0,255,0,0.3);
 }
 
+.exhibition_img {
+    width: 600px;
+}
+
 .exhibition_img img {
-    max-width: 600px;
+    max-width: 100%;
 }
