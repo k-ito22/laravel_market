@@ -100,6 +100,15 @@ textarea {
     width: 95%;
 }
 
+.item_show_img {
+    width: 600px;
+}
+
+.item_show_img img {
+    max-width: 100%;
+}
+
+
 .not_tagged {
     opacity: 0.2;
 }

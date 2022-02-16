@@ -14,7 +14,7 @@
             ({{ $item->created_at }})
         </div>
         <div class="item_body">
-            <div class="item_img">
+            <div class="item_show_img">
                 <img src="{{ \Storage::url($item->image) }}">
             </div>
             <div class="item_body_name">
