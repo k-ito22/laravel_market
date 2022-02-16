@@ -43,7 +43,9 @@
                     <div>
                         {{ $order_item->name }}
                     </div>
-                    <img src="{{ \Storage::url($order_item->image) }}" alt="商品画像">
+                    <div class="item_show_img">
+                        <img src="{{ \Storage::url($order_item->image) }}" alt="商品画像">
+                    </div>
                 </a>
             </li>
         @empty
