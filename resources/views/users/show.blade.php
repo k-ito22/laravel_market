@@ -43,7 +43,7 @@
                     <div>
                         {{ $order_item->name }}
                     </div>
-                    <div class="item_show_img">
+                    <div class="buy_item_img">
                         <img src="{{ \Storage::url($order_item->image) }}" alt="商品画像">
                     </div>
                 </a>
