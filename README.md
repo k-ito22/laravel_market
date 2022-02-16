@@ -5,7 +5,6 @@
 
 <br />
 <br />
-<br />
 
 
 ## アプリURL
@@ -26,7 +25,6 @@ https://ol-dd-wing.conohawing.com/laravel-market/
 - AWS Cloud9
 - ConoHa
 - Git,GitHub
-<br />
 <br />
 <br />
 
@@ -55,7 +53,6 @@ https://ol-dd-wing.conohawing.com/laravel-market/
     - 気になる商品に好きな色のリボンをつけることができる
     - 同じ色のリボンがついた商品は、一目で比較ができる
     - 色別にリボンの全解除を行うことができる
-<br />
 <br />
 <br />
 
