@@ -65,6 +65,10 @@ dd {
     align-items: center;
 }
 
+.profile_image img {
+    max-width: 600px;
+}
+
 .profile_image a {
     margin-left: 4px;
 }
@@ -114,4 +118,8 @@ textarea {
 
 .ribbon-tab-green {
     background-color: rgba(0,255,0,0.3);
+}
+
+.exhibition_img img {
+    max-width: 600px;
 }

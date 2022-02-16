@@ -20,7 +20,7 @@
                 ({{ $item->created_at }})
             </div>
             <div class="item_body">
-                <div class="item_body_img">
+                <div class="exhibition_img">
                     <a href="{{ route('items.show', $item) }}">
                         <img src="{{ \Storage::url($item->image) }}">
                     </a>
